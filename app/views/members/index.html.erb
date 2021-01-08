@@ -2,8 +2,8 @@
 
 <h1>Members</h1>
 
-<table>
-  <thead>
+<table class="table table-light table-hover">
+  <thead class="table-dark">
     <tr>
       <th>First name</th>
       <th>Last name</th>
@@ -24,7 +24,7 @@
         <td><%= member.skill %></td>
         <td><%= link_to 'Show', member %></td>
         <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Member', new_member_path %>
+<%= link_to 'Join Now', new_member_path, class:"btn btn-dark"%>

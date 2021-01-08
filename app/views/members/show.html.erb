@@ -1,29 +1,13 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @member.first_name %>
-</p>
+<div class="jumbotron">
+  <h1 class="display-4"> <%= @member.first_name %> <%= @member.last_name %></h1>
+  <hr class="my-4">
+  <p class="lead"><%= @member.skill %></p>
+  <p>  <%= @member.phone %> | <%= @member.email %></p>
+  <br/>
+  <p class="lead">
+    <%= link_to 'Edit', edit_member_path(@member), class:"btn btn-dark" %> 
+    <%= link_to 'Back', members_path , class:"btn btn-dark" %> 
+  </p>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @member.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @member.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @member.phone %>
-</p>
-
-<p>
-  <strong>Skill:</strong>
-  <%= @member.skill %>
-</p>
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
